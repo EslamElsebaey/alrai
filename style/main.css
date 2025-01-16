@@ -604,7 +604,7 @@ button:focus {
   content: "\f078";
   font-family: "Font Awesome 6 Pro";
   font-size: 12px;
-  color: #000;
+  color: #333;
 }
 .dropdown-li:hover > a::after {
   color: #2ebb68;
@@ -1661,7 +1661,7 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
   max-width: 100%;
   outline: none;
   border: 1px solid transparent;
-  color: #000;
+  color: #333;
   padding-inline-start: 20px;
   padding-inline-end: 40px;
   font-size: 16px;
