@@ -1,0 +1,32 @@
+
+.brand-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        max-width: 100%;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.502;
+        transition: all ease-in-out 0.2s;
+    }
+    &:hover{
+        img{
+            filter: none;
+            opacity: 1;
+        }
+    }
+}
+.brands-parent{
+    padding-inline: 20px;
+    @include max-768 {
+        padding: 0;
+    }
+}
+.brands-parent .swiper-pagination {
+    bottom: -75px;
+    @include max-768 {
+        bottom: -40px;
+    }
+}

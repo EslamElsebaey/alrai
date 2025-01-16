@@ -1,0 +1,36 @@
+.mainBanner {
+  .mainBanner-parent {
+    position: relative;
+    height: 100%;
+    .swiper-pagination {
+      bottom: 30px;
+      @include max-768 {
+        bottom: 10px;
+      }
+    }
+  }
+  .swiper {
+    height: 100%;
+  }
+}
+
+.mainBanner-link {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+  }
+}
+
+@include max-992 {
+  .mainBanner-link img {
+    height: auto;
+  }
+}
+
+@include max-768 {
+  .mainBanner .swiper-pagination {
+    bottom: 10px;
+  }
+}
