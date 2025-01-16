@@ -1703,6 +1703,7 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
 .contact-links li .title {
   font-size: 14px;
   color: #fff;
+  font-weight: 300;
 }
 .contact-links li .anchor {
   font-size: 14px;
