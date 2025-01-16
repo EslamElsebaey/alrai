@@ -24,7 +24,6 @@ $(document).ready(function () {
       imageObserver.observe(image);
     });
   }
-
   function preloadImage(img) {
     img.src = img.getAttribute("data-src");
     img.onload = function () {
@@ -34,9 +33,8 @@ $(document).ready(function () {
       // img.parentElement.parentElement.classList.add("lazy-head-img");
     };
   }
-
   lazyLoad();
-  // **************************************************************************************
+  // ***********************************************************************************************
   // SWIPERS
 
   // Main Swiper
@@ -61,6 +59,7 @@ $(document).ready(function () {
     },
   });
 
+  // Product Swiper
   const productSwiper = new Swiper(".products .swiper", {
     loop: true,
     draggable: true,
@@ -99,6 +98,7 @@ $(document).ready(function () {
     },
   });
 
+  // Recipes Swiper
   const recipeSwiper = new Swiper(".recipes .swiper", {
     loop: true,
     draggable: true,
@@ -136,6 +136,7 @@ $(document).ready(function () {
       },
     },
   });
+  // Brands Swiper
   const brandSwiper = new Swiper(".brands .swiper", {
     loop: true,
     draggable: true,
@@ -170,9 +171,10 @@ $(document).ready(function () {
     },
   });
 
-  // Counters
-  const statisticsSection = document.querySelector(".statistics");
+  // ***********************************************************************************************
 
+  // Counter up
+  const statisticsSection = document.querySelector(".statistics");
   if (statisticsSection) {
     const sectionOffsetTop = statisticsSection.offsetTop;
     const windowHeight = window.innerHeight;
@@ -183,7 +185,6 @@ $(document).ready(function () {
         const interval = 2000;
         numberElements.forEach((numberElement) => {
           if (numberElement.textContent == 0) {
-            console.log(10);
             let startValue = 0;
             const endValue = parseInt(numberElement.dataset.num);
             const duration = Math.floor(interval / endValue);
@@ -199,7 +200,9 @@ $(document).ready(function () {
       }
     });
   }
-  /*************************************************************************************** */
+
+  // ***********************************************************************************************
+
   // show and hide search
 
   $(".open-search").click(function () {
@@ -219,7 +222,9 @@ $(document).ready(function () {
     $("body").removeClass("overflowHidden");
   });
 
-  // open and close sideBar
+  // ***********************************************************************************************
+
+  // Mobile Side Menu
 
   $(".bars").click(function () {
     $("nav").addClass("show-site-nav");
@@ -231,7 +236,9 @@ $(document).ready(function () {
     $("body").removeClass("overflowHidden");
   });
 
-  // mobile dropdoen Menu
+  // ***********************************************************************************************
+
+  // Mobile Dropdown Menu
 
   if ($(window).width() < 992) {
     $(".dropdown-li > a").removeAttr("href");
@@ -247,43 +254,29 @@ $(document).ready(function () {
     });
   }
 
-  // Fixed Nav
+  // ***********************************************************************************************
+
+  // Fixed header
 
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 40) {
-      $("header").addClass("fixed-header");
+      $(".header").addClass("fixed-header");
     } else {
-      $("header").removeClass("fixed-header");
+      $(".header").removeClass("fixed-header");
     }
   });
 
-  /*************************************************************************************** */
+  // ***********************************************************************************************
 
-  //  nested menus in footer
+  //  Footer Dropdown Menu
 
   if ($(window).width() < 768) {
     $(".footer-title").click(function () {
-      $(this).next(".quick-drop").slideToggle(300);
+      $(this).next(".collapsible").slideToggle(300);
       $(this).toggleClass("arrow-rotate");
-      $(".footer-title").not($(this)).next(".quick-drop").slideUp(300);
+      $(".footer-title").not($(this)).next(".collapsible").slideUp(300);
       $(".footer-title").not($(this)).removeClass("arrow-rotate");
     });
   }
-  /********************************************************************* */
-
-  // totop Button
-
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 150) {
-      $(".toTop").addClass("showToTop");
-    } else {
-      $(".toTop").removeClass("showToTop");
-    }
-  });
-
-  $(".toTop").click(function () {
-    $(window).scrollTop(0);
-  });
-
-  /*********************************************************************************** */
-}); // End document ready
+  // ***********************************************************************************************
+}); // End Document Ready

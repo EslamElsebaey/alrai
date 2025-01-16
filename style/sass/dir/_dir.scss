@@ -1,0 +1,14 @@
+html[dir="ltr"] {
+  .vision-item .text {
+    line-height: 25px;
+  }
+  .text-content .desc{
+    line-height: 28px;
+  }
+  .message .send .icon{
+    transform: rotate(180deg);
+  }
+  .stat-item .text{
+    line-height: 25px;
+  }
+}

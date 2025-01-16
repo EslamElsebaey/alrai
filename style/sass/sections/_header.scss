@@ -10,12 +10,15 @@
   &::after {
     content: "";
     background-image: linear-gradient(90deg, #2ebb68 0%, #00b7f0 100%);
-    height: 2px;
+    height: 1.5px;
     width: 100%;
     left: 0;
     bottom: -1px;
     position: absolute;
     z-index: 0;
+    // @include max-768 {
+    //   height: 1.5px;
+    // }
   }
   .container-fluid {
     padding-inline: 30px;
@@ -36,7 +39,7 @@
   .logo {
     &::before {
       height: 9px;
-      bottom: -9px;
+      bottom: -9.5px;
     }
     &::after {
       width: 40px;
@@ -64,6 +67,10 @@
   display: flex;
   align-items: center;
   gap: 45px;
+  @include max-1200 {
+    gap: 0;
+    justify-content: space-between;
+  }
   @include max-992 {
     justify-content: space-between;
   }
@@ -71,6 +78,9 @@
 }
 .site-nav {
   margin-inline-start: auto;
+  @include max-1200 {
+    margin-inline-start: unset;
+  }
 }
 .logo {
   display: flex;
@@ -100,11 +110,11 @@
     background: #fff;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -19px;
+    bottom: -19.5px;
     z-index: 6;
     @include max-768 {
-      bottom: -9px;
-      height: 8px;
+      bottom: -9.5px;
+      height: 9px;
     }
   }
   img {
@@ -127,6 +137,12 @@
         font-size: 16px;
         font-weight: 700;
         transition: all linear 0.2s;
+        @include max-1200{
+          font-size: 14px;
+        }
+        @include max-992 {
+          font-size: 16px;
+        }
         &:hover {
           color: $second-color;
         }
@@ -559,8 +575,8 @@ html[dir="ltr"] {
     width: 120px;
   }
   .search .close-searh-btn {
-    top: 30px;
-    inset-inline-start: 30px;
+    top: 20px;
+    inset-inline-start: 20px;
   }
   .general-details {
     min-width: 130px;

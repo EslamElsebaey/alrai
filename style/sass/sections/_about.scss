@@ -27,7 +27,7 @@
   .main-title {
     margin-inline: unset;
     text-align: start;
-    @include max-768 {
+    @include max-1200 {
       text-align: center;
     }
   }
@@ -54,10 +54,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  @include max-1200 {
+    grid-template-columns: repeat(2 , max-content);
+    justify-content: center;
+  }
   @include max-768 {
     gap: 15px;
-    // grid-template-columns: 1fr;
     justify-items: center;
+     grid-template-columns: repeat(2, 1fr);
   }
 }
 .vision-item {
@@ -68,7 +72,7 @@
   border: 2px solid #e6e6e6;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   max-width: 250px;
   @include max-768 {

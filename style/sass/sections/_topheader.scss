@@ -15,9 +15,6 @@
     font-size: 16px;
     color: #ffffff;
     font-weight: 700;
-    @include max-768 {
-      font-size: 15px;
-    }
   }
   .phone-link {
     margin-inline-start: 10px;

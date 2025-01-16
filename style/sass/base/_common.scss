@@ -36,7 +36,7 @@
 
 // End Preloader
 
-.whatsapp-wrapper{
+.whatsapp-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@
     bottom: 10px;
     right: 10px;
   }
-  a{
+  a {
     width: 60px;
     height: 60px;
     display: flex;
@@ -61,28 +61,31 @@
       width: 45px;
       height: 45px;
     }
-    .icon{
+    .icon {
       color: #fff;
     }
   }
-  a.mobile{
+  a.mobile {
     background-color: #00529b;
-    &:hover{
-      transform: translateY(-10px);
+    &:hover {
+      .icon {
+        animation: shake 0.5s ease-in-out infinite;
+      }
+      // transform: translateY(-10px);
     }
-    .icon{
+    .icon {
       font-size: 30px;
       @include max-768 {
         font-size: 25px;
       }
     }
   }
-  a.whatsapp{
+  a.whatsapp {
     background-color: #2ebb68;
-    &:hover{
+    &:hover {
       transform: scale(1.1);
     }
-    .icon{
+    .icon {
       font-size: 36px;
       @include max-768 {
         font-size: 28px;
@@ -91,8 +94,20 @@
   }
 }
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 // Swiper
-
 
 .products-parent,
 .recipes-parent,
@@ -105,7 +120,6 @@
     }
   }
 }
-
 
 .swiper-pagination {
   display: flex;
@@ -128,8 +142,6 @@
   background-color: $second-color;
   opacity: 1;
 }
-
-
 
 // End Swiper
 
@@ -164,12 +176,12 @@
   color: #2ebb68;
   margin-bottom: 25px;
   text-align: start;
+  text-transform: capitalize;
   @include max-768 {
     text-align: center;
     margin-bottom: 15px;
   }
 }
-
 
 // Lazy load
 
