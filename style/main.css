@@ -1666,6 +1666,13 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer-items .row .col-md-6:nth-child(3),
+  .footer-items .row .col-md-6:nth-child(4) {
+    margin-top: 30px;
+  }
+}
+
 .contact-li {
   display: flex;
   -moz-column-gap: 8px;

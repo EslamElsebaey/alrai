@@ -38,6 +38,16 @@
     }
   }
 }
+.footer-items {
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .row {
+      .col-md-6:nth-child(3),
+      .col-md-6:nth-child(4) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
 .contact-li {
   display: flex;
   column-gap: 8px;
