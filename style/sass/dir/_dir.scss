@@ -11,4 +11,13 @@ html[dir="ltr"] {
   .stat-item .text{
     line-height: 25px;
   }
+  .year-item .year-desc{
+    line-height: 1.7;
+  }
+  .year-item{
+    min-height: 267px;
+    @include max-768 {
+      min-height: 237px;
+    }
+  }
 }

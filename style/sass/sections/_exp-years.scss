@@ -1,0 +1,56 @@
+.exp-years {
+  .swiper {
+    padding-top: 50px;
+  }
+}
+
+.year-item {
+  max-width: 262px;
+  width: 100%;
+  min-height: 237px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  border: 2px solid #e6e6e6;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 70px 30px 30px;
+  position: relative;
+  @include max-1200 {
+    margin-inline: auto;
+  }
+  @include max-768 {
+    // width: 100%;
+     padding: 60px 20px 20px;
+     align-items: center;
+  }
+  .year-date {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #2ebb68;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -45px;
+    z-index: 1;
+  }
+  .year-desc {
+    max-width: 207px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0;
+    @include max-768 {
+        max-width: 100%;
+    }
+  }
+}

@@ -1,6 +1,4 @@
-.products,
-.recipes,
-.brands {
+.common-padding {
   padding-top: 90px;
   padding-bottom: 160px;
   @include max-768 {

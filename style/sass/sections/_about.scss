@@ -60,14 +60,14 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   @include max-1200 {
-    grid-template-columns: repeat(2 , max-content);
+    grid-template-columns: repeat(2, max-content);
     justify-content: center;
   }
   @include max-768 {
     margin-top: 30px;
     gap: 15px;
     justify-items: center;
-     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .vision-item {
@@ -133,7 +133,6 @@
     height: 500px;
     aspect-ratio: 263 / 500;
     border-radius: 25px;
-    transition: all linear 0.2s;
     @include max-768 {
       max-width: 100%;
       height: auto;
@@ -145,5 +144,30 @@
   }
   .img-wrapper:first-of-type {
     margin-top: 50px;
+  }
+}
+
+// About Page
+.about-page-sec {
+  padding-top: 30px;
+  padding-bottom: 90px;
+  @include max-768 {
+    padding-bottom: 50px;
+  }
+  .vision-item {
+    max-width: 100%;
+    min-height: 213px;
+    justify-content: center;
+    @include max-768 {
+      min-height: unset;
+      padding: 15px 10px;
+      justify-content: flex-start;
+    }
+  }
+  .visions-wrapper {
+    margin-top: 90px;
+    @include max-768 {
+      margin-top: 35px;
+    }
   }
 }

@@ -184,6 +184,40 @@ $(document).ready(function () {
       },
     },
   });
+  // Product Swiper
+  const expYearsSwiper = new Swiper(".exp-years .swiper", {
+    loop: true,
+    draggable: true,
+    // autoplay: true,
+    speed: 800,
+    pagination: {
+      el: ".exp-years .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      350: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
 
   // ***********************************************************************************************
 

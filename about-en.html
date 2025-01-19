@@ -9,11 +9,14 @@
     <meta name="keywords" content="">
     <link rel="icon" href="images/logo.png" type="image/webp" />
     <link rel="stylesheet" href="style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/all.min.css">
     <link rel="stylesheet" href="style/bootstrap.min.css">
     <link rel="stylesheet" href="style/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.css" />
-    <title>AlRai Food Industries</title>
+    <title>About Us</title>
 </head>
 
 <body>
@@ -25,6 +28,7 @@
         <div class="preloader"></div>
     </div>
     <!-- End Preloader -->
+
 
 
     <!-- Start Header -->
@@ -39,7 +43,7 @@
                         <div class="language">
                             <i class="fa-regular fa-globe icon"></i>
                             <ul class=" langauge-details general-details">
-                                <li><a href="index.html">العربية</a></li>
+                                <li><a href="about.html">العربية</a></li>
                             </ul>
                         </div>
                         <button class="close-btn">
@@ -132,7 +136,7 @@
                     <div class="language">
                         <i class="fa-regular fa-globe icon"></i>
                         <ul class=" langauge-details general-details">
-                            <li><a href="index.html">العربية</a></li>
+                            <li><a href="about.html">العربية</a></li>
                         </ul>
                     </div>
                     <button class="bars">
@@ -160,37 +164,24 @@
     </header>
     <!-- End Header -->
 
-
-    <!-- Start Mainbanner -->
-    <main class="mainBanner">
-        <div class="mainBanner-parent">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="mainslider-item   ">
-                            <a class="mainBanner-link" href="#">
-                                <img src="images/main-banner.jpg" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="mainslider-item   ">
-                            <a class="mainBanner-link" href="#">
-                                <img src="images/main-banner.jpg" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
+    <!-- Start Breadcrumb -->
+    <section class="breadcrumb-sec breadcrumb-container">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="item-home">
+                    <a class="bread-link bread-home  " href="en.html">home </a>
+                </li>
+                <li class="active">
+                    <span class="bread-current"> about us </span>
+                </li>
+            </ol>
         </div>
-    </main>
-    <!-- End Mainbanner
+    </section>
+    <!-- End Breadcrumb -->
 
-  
 
-  <!-- Start About  -->
-    <section class="about">
+    <!-- Start About  -->
+    <section class="about about-page-sec">
         <div class="container">
             <div class="about-content">
                 <div class="text-content">
@@ -203,32 +194,23 @@
                         </h2>
                     </div>
                     <p class="desc">
-                        AlRai Food Industries was established in 1968 in the city of Al-Ahsa in the Eastern Province. It
-                        quickly developed from
-                        a small dairy factory to become a major Saudi company producing a wide range of food products.
-                        The factory is now one of
-                        the most important producers and suppliers of dairy and juices in the Kingdom.
+                        AlRai Food Industries Company is one of the leading companies in the Kingdom of Saudi Arabia,
+                        established in 1968 in
+                        the village of Al-Shaharin Al-Ahsa in the Eastern Province under the management of Mohammed Musa
+                        Bukhamsin. The company
+                        has rapidly developed to become one of the most prominent producers and exporters of juices and
+                        dairy products in the
+                        Kingdom.
+
+                        <br> <br>
+                        The factory has received an "A" rating from the Saudi Food and Drug Authority, reflecting its
+                        commitment to quality and
+                        food safety standards.
+
+                        <br> <br>
+                        The company's products include a variety of juices, dairy products, ice cream, and ice cream
+                        cups and cones.
                     </p>
-                    <div class="visions-wrapper">
-                        <div class="vision-item">
-                            <i class="fas fa-eye icon"></i>
-                            <h3 class="title">
-                                Our vision
-                            </h3>
-                            <p class="text">
-                                To become leaders in the food industry
-                            </p>
-                        </div>
-                        <div class="vision-item">
-                            <i class="fa-light fa-scroll icon"></i>
-                            <h3 class="title">
-                                Our message
-                            </h3>
-                            <p class="text">
-                                Providing high quality products at competitive prices.
-                            </p>
-                        </div>
-                    </div>
                 </div>
                 <div class="imgs-content">
                     <div class="img-wrapper loading-img  ">
@@ -239,9 +221,60 @@
                     </div>
                 </div>
             </div>
+            <div class="visions-wrapper">
+                <div class="vision-item">
+                    <i class="fas fa-eye icon"></i>
+                    <h3 class="title">
+                        Our vision
+                    </h3>
+                    <p class="text">
+                        To become leaders in the food industry
+                    </p>
+                </div>
+                <div class="vision-item">
+                    <i class="fa-light fa-scroll icon"></i>
+                    <h3 class="title">
+                        Our message
+                    </h3>
+                    <p class="text">
+                        Providing high quality products at competitive prices.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- End About  -->
+
+    <!-- Start Advantages -->
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages-content">
+                <div class="img-content loading-img">
+                    <img data-src="images/advantages/1.jpg" alt="" class="lazy-img">
+                </div>
+                <div class="text-content">
+                    <div class="titles-wrapper">
+                        <h2 class="main-title">
+                            AlRai Factory Features
+                        </h2>
+                    </div>
+                    <ul class="advantages-list">
+                        <li>
+                            <i class="fa-light fa-circle-check icon"></i>
+                            Our team's hard work, commitment and respect for the highest standards in production,
+                            technology and services.
+                        </li>
+                        <li>
+                            <i class="fa-light fa-circle-check icon"></i>
+                            High quality nutrition and services that respond to our customers' needs, health, tastes and
+                            desires.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Advantages -->
 
     <!-- Start Statistics -->
     <section class="statistics">
@@ -279,247 +312,71 @@
     </section>
     <!-- End Statistics -->
 
-    <!-- products -->
-    <div class="products common-padding">
+    <!-- Start Experience Years -->
+    <div class="exp-years common-padding">
         <div class="container">
             <div class="titles-wrapper">
-                <h3 class="sub-title">
-                    products
-                </h3>
                 <h2 class="main-title">
-                    Natural flavors and unmatched quality!
+                    Over 50 years of experience in the food industry
                 </h2>
             </div>
-            <div class="products-parent">
-                <div class="swiper ">
+            <div class="exp-years-parent">
+                <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="product-item ">
-                                <a href="single-product.html" class="img-holder loading-img  ">
-                                    <img data-src="images/products/1.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="single-product.html" class="product-title">
-                                    milk
-                                </a>
+                            <div class="year-item">
+                                <p class="year-desc">
+                                    AlRai Food Industries Company was established in Al-Ahsa city, as a company
+                                    specialized in manufacturing and
+                                    distributing juices
+                                </p>
+                                <div class="year-date">
+                                    1968
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="product-item ">
-                                <a href="single-product.html" class="img-holder loading-img  ">
-                                    <img data-src="images/products/2.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="single-product.html" class="product-title">
-                                    Juices
-                                </a>
+                            <div class="year-item">
+                                <p class="year-desc">
+                                    Initial expansion by increasing production and developing manufacturing lines to
+                                    meet the growing local demand for
+                                    juices and dairy products.
+                                </p>
+                                <div class="year-date">
+                                    1970
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="product-item ">
-                                <a href="single-product.html" class="img-holder loading-img  ">
-                                    <img data-src="images/products/3.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="single-product.html" class="product-title">
-                                    Cooking creams
-                                </a>
+                            <div class="year-item">
+                                <p class="year-desc">
+                                    Diversify products by adding new products and developing packaging to match the
+                                    standards of modern markets.
+                                </p>
+                                <div class="year-date">
+                                    1980
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="product-item ">
-                                <a href="single-product.html" class="img-holder loading-img  ">
-                                    <img data-src="images/products/4.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="single-product.html" class="product-title">
-                                    Ice cream mix
-                                </a>
+                            <div class="year-item">
+                                <p class="year-desc">
+                                    Export and openness by exporting to the Gulf countries and enhancing the commercial
+                                    identity and increasing the fame of
+                                    the irrigation brand in the region
+                                </p>
+                                <div class="year-date">
+                                    1990
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="product-item ">
-                                <a href="single-product.html" class="img-holder loading-img  ">
-                                    <img src="images/products/1.jpg" data-src="images/products/1.jpg" class="lazy-img"
-                                        alt="">
-                                </a>
-                                <a href="single-product.html" class="product-title">
-                                    milk
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
-    <!-- End products -->
-
-    <!-- Start Recipes -->
-    <section class="recipes common-padding">
-        <div class="container">
-            <div class="titles-wrapper">
-                <h3 class="sub-title">
-                    Recipes
-                </h3>
-                <h2 class="main-title">
-                    We provide a range of creative recipes that you can prepare using AlRai products
-                </h2>
-            </div>
-            <div class="recipes-parent">
-                <div class="swiper ">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="recipe-item ">
-                                <a href="#" class="img-holder loading-img">
-                                    <img data-src="images/recipes/1.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="#" class="recipe-title">
-                                    Oatmeal cookies
-                                </a>
-                                <p class="recipe-desc">
-                                    Enjoy delicious and healthy oatmeal cookies, an ideal choice as a snack with coffee,
-                                    as it gives you energy that lasts
-                                    all day long.
-                                </p>
-                                <a href="#" class="recipe-link">
-                                    Read more
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="recipe-item ">
-                                <a href="#" class="img-holder loading-img">
-                                    <img data-src="images/recipes/2.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="#" class="recipe-title">
-                                    Apple Yogurt Cake
-                                </a>
-                                <p class="recipe-desc">
-                                    Enjoy this apple yogurt cake full of cinnamon flavor. An easy and delicious recipe,
-                                    perfect for desserts in the fall
-                                    days.
-                                </p>
-                                <a href="#" class="recipe-link">
-                                    Read more
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="recipe-item ">
-                                <a href="#" class="img-holder loading-img">
-                                    <img data-src="images/recipes/3.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="#" class="recipe-title">
-                                    Cream of lentil soup
-                                </a>
-                                <p class="recipe-desc">
-                                    Creamy Lentil Soup is a complete recipe that combines warmth, flavor, and high
-                                    nutritional value, making it a delicious
-                                    and nutritious choice for your family in the winter.
-                                </p>
-                                <a href="#" class="recipe-link">
-                                    Read more
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="recipe-item ">
-                                <a href="#" class="img-holder loading-img">
-                                    <img data-src="images/recipes/1.jpg" class="lazy-img" alt="">
-                                </a>
-                                <a href="#" class="recipe-title">
-                                    Oatmeal cookies
-                                </a>
-                                <p class="recipe-desc">
-                                    Enjoy delicious and healthy oatmeal cookies, an ideal choice as a snack with coffee,
-                                    as it gives you energy that
-                                    lasts
-                                    all day long.
-                                </p>
-                                <a href="#" class="recipe-link">
-                                    Read more
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-    <!-- End Recipes -->
-
-    <!-- Start Brands -->
-    <section class="brands  common-padding">
-        <div class="container">
-            <div class="titles-wrapper">
-                <h2 class="main-title">
-                    Brands
-                </h2>
-            </div>
-            <div class="brands-parent">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="brand-item loading-img">
-                                <img data-src="images/logo.png" class="lazy-img" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="brand-item loading-img">
-                                <img data-src="images/logo.png" class="lazy-img" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="brand-item loading-img">
-                                <img data-src="images/logo.png" class="lazy-img" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="brand-item loading-img">
-                                <img data-src="images/logo.png" class="lazy-img" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="brand-item loading-img">
-                                <img data-src="images/logo.png" class="lazy-img" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="brand-item loading-img">
-                                <img data-src="images/logo.png" class="lazy-img" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-    <!-- End Brands -->
-    <!-- Start Branches -->
-    <section class="branches">
-        <div class="container">
-            <div class="branches-wrapper">
-                <div class="text-content">
-                    <div class="titles-wrapper">
-                        <h2 class="main-title">
-                            Our Branches Across the Kingdom
-                        </h2>
-                    </div>
-                    <a href="#" class="contact-link">
-                        View contact information
-                    </a>
-                </div>
-                <div class="img-wrapper">
-                    <img src="images/branches/1.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Branches -->
-
-
+    <!-- End Experience Years -->
 
     <!-- Start Footer -->
     <footer class="footer">
@@ -711,6 +568,9 @@
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 
 </body>
