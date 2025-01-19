@@ -34,6 +34,20 @@ $(document).ready(function () {
     };
   }
   lazyLoad();
+
+  // ***********************************************************************************************
+
+  // Fire Select2
+
+  if ($(".myselect").length > 0) {
+    // fire select2
+    $(".myselect").select2();
+
+    $(".form select").select2({
+      minimumResultsForSearch: -1,
+    });
+  }
+
   // ***********************************************************************************************
   // SWIPERS
 
