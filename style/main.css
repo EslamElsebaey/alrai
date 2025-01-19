@@ -2327,4 +2327,9 @@ html[dir=ltr] .year-item {
   html[dir=ltr] .year-item {
     min-height: 237px;
   }
+}
+@media only screen and (max-width: 767px) {
+  html[dir=ltr] .advantages-list li {
+    line-height: 1.6;
+  }
 }/*# sourceMappingURL=main.css.map */

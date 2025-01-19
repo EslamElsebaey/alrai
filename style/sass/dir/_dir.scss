@@ -20,4 +20,9 @@ html[dir="ltr"] {
       min-height: 237px;
     }
   }
+  .advantages-list li{
+    @include max-768 {
+      line-height: 1.6;
+    }
+  }
 }
