@@ -103,6 +103,12 @@ html[dir="rtl"] {
 
 // Select2
 
+
+.select2-hidden-accessible , select{
+    width: 100% !important;
+    height: 50px !important;
+}
+
 .select2-container--default
   .select2-results__option--highlighted[aria-selected] {
   background-color: $main-color;

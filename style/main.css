@@ -1666,6 +1666,188 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
   background-color: #00529b;
 }
 
+.form {
+  width: 100%;
+}
+
+.input-holder {
+  position: relative;
+}
+.input-holder .input,
+.input-holder .textarea {
+  height: 50px;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding-inline: 30px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  transition: all linear 0.2s;
+}
+.input-holder .input:focus,
+.input-holder .textarea:focus {
+  border-color: #00529b;
+  outline: none;
+}
+@media only screen and (max-width: 767px) {
+  .input-holder .input,
+  .input-holder .textarea {
+    padding-inline: 20px;
+  }
+}
+.input-holder .input[type=tel]::-moz-placeholder {
+  font-size: 14px;
+  color: #808080;
+}
+.input-holder .input[type=tel]::placeholder {
+  font-size: 14px;
+  color: #808080;
+}
+.input-holder .textarea {
+  resize: none;
+  padding-top: 15px;
+  height: 100px;
+}
+.input-holder .label {
+  padding-inline-start: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.input-holder .label span.required {
+  color: #ff0000;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media only screen and (max-width: 767px) {
+  .input-holder .label {
+    margin-bottom: 5px;
+    padding-inline-start: 20px;
+    font-size: 15px;
+  }
+}
+.input-holder.textarea-holder {
+  grid-column: 1/3;
+}
+@media only screen and (max-width: 767px) {
+  .input-holder.textarea-holder {
+    grid-column: unset;
+  }
+}
+
+.inputs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .inputs-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+html[dir=rtl] .input[type=tel] {
+  text-align: right;
+}
+
+.submitBtn {
+  min-width: 263px;
+  height: 55px;
+  border-radius: 28px;
+  background-color: #2ebb68;
+  margin-top: 30px;
+  padding-inline: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-inline: auto;
+  color: #ffffff;
+  font-weight: 700;
+  transition: all linear 0.2s;
+}
+@media only screen and (max-width: 767px) {
+  .submitBtn {
+    min-width: 200px;
+    height: 50px;
+  }
+}
+.submitBtn:hover {
+  background-color: #00529b;
+}
+
+.select2-hidden-accessible, select {
+  width: 100% !important;
+  height: 50px !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #00529b;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+.select2-container::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Pro";
+  position: absolute;
+  inset-inline-end: 25px;
+  color: #808080;
+  transition: all 0.3s;
+  font-size: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.select2-container--open .select2-selection--single {
+  border-color: #00529b !important;
+}
+.select2-container--open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select2-container .select2-selection--single {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+html[dir=rtl] .select2-container .select2-selection--single .select2-selection__rendered,
+html[dir=ltr] .select2-container .select2-selection--single .select2-selection__rendered {
+  padding-inline: 30px;
+}
+@media only screen and (max-width: 767px) {
+  html[dir=rtl] .select2-container .select2-selection--single .select2-selection__rendered,
+  html[dir=ltr] .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-inline: 20px;
+  }
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  width: 100%;
+  color: #808080;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
 .export-form {
   padding-top: 40px;
   padding-bottom: 100px;
