@@ -188,7 +188,7 @@ $(document).ready(function () {
   const expYearsSwiper = new Swiper(".exp-years .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 800,
     pagination: {
       el: ".exp-years .swiper-pagination",
