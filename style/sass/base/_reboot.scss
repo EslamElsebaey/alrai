@@ -19,6 +19,13 @@ body {
   &.overflowHidden {
     overflow: hidden;
   }
+  padding-top: 110px;
+  @include max-1200{
+    padding-top: 96.88px;
+  }
+   @include max-768{
+    padding-top: 74.5px;
+  }
 }
 
 button,

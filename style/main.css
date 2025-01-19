@@ -64,12 +64,23 @@ body {
   font-family: "Bahij TheSansArabic";
   font-weight: 400;
   font-style: normal;
+  padding-top: 110px;
 }
 body.overflowVisible {
   overflow: visible;
 }
 body.overflowHidden {
   overflow: hidden;
+}
+@media only screen and (max-width: 1199px) {
+  body {
+    padding-top: 96.88px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body {
+    padding-top: 74.5px;
+  }
 }
 
 button,
@@ -488,10 +499,14 @@ ol.breadcrumb li {
 }
 
 .header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
   padding: 20px 0;
-  position: relative;
   background-color: #ffffff;
   transition: all linear 0.3s;
+  z-index: 10;
 }
 @media only screen and (max-width: 767px) {
   .header {
@@ -519,11 +534,6 @@ ol.breadcrumb li {
 }
 
 .fixed-header {
-  z-index: 30;
-  left: 0;
-  width: 100%;
-  position: fixed;
-  top: 0;
   padding: 10px 0;
 }
 .fixed-header .logo::before {
@@ -624,6 +634,11 @@ ol.breadcrumb li {
   gap: 30px;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 1299px) {
+  .site-nav .nav-ul {
+    gap: 15px;
+  }
 }
 .site-nav .nav-ul > li {
   display: flex;

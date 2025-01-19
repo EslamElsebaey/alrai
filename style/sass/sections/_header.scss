@@ -1,8 +1,12 @@
 .header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
   padding: 20px 0;
-  position: relative;
   background-color: #ffffff;
   transition: all linear 0.3s;
+  z-index: 10;
   @include max-768 {
     padding: 12px 0 10px 0;
   }
@@ -30,11 +34,6 @@
 }
 
 .fixed-header {
-  z-index: 30;
-  left: 0;
-  width: 100%;
-  position: fixed;
-  top: 0;
   padding: 10px 0;
   .logo {
     &::before {
@@ -58,6 +57,8 @@
     }
   }
 }
+
+
 
 .langauge-details li a {
   text-transform: capitalize;
@@ -129,6 +130,9 @@
     gap: 30px;
     justify-content: center;
     align-items: center;
+    @include max-1300 {
+      gap: 15px;
+    }
     > li {
       display: flex;
       > a {
