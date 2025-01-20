@@ -41,7 +41,7 @@
 .breadcrumb-sec {
   padding: 40px 0 30px 0;
   @include max-768 {
-    padding-bottom: 20px ;
+    padding-bottom: 20px;
   }
 }
 
@@ -174,11 +174,15 @@ ol.breadcrumb li {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+
 // Swiper
 
-.products-parent,
-.recipes-parent,
-.brands-parent , .exp-years-parent {
+// .products-parent,
+// .recipes-parent,
+// .brands-parent , .exp-years-parent {
+
+// }
+.general-swiper-parent {
   position: relative;
   .swiper-pagination {
     bottom: -50px;
@@ -186,31 +190,88 @@ ol.breadcrumb li {
       bottom: -35px;
     }
   }
-}
-
-.swiper-pagination {
-  display: flex;
-  justify-content: center;
-  z-index: 5;
-}
-
-.swiper-pagination-bullet {
-  opacity: 0.502;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #000000;
-  @include max-768 {
-    width: 8px;
-    height: 8px;
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    z-index: 5;
   }
-}
-.swiper-pagination-bullet-active {
-  background-color: $second-color;
-  opacity: 1;
+
+  .swiper-pagination-bullet {
+    opacity: 0.502;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    @include max-768 {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $second-color;
+    opacity: 1;
+  }
 }
 
 // End Swiper
+
+
+// General Table
+
+
+.general-table {
+  .table {
+    --bs-table-striped-bg: #edf3f8;
+    margin-bottom: 0;
+    --bs-table-border-color: #fff;
+  }
+  &.table-responsive::-webkit-scrollbar {
+    display: none;
+  }
+  .table th {
+    color: #fff;
+    background-color: #00529b;
+  }
+  .table th,
+  .table td {
+    padding-inline-start: 20px;
+    padding-block: 13px;
+    min-width: 207px;
+    height: 55px;
+    vertical-align: middle;
+    @include max-768 {
+      min-width: 170px;
+      padding-inline-start: unset;
+      padding: 13px 15px;
+      height: auto;
+    }
+  }
+  .table th {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    @include max-768 {
+      font-size: 16px;
+    }
+  }
+  .table td {
+    font-size: 18px;
+    color: #333333;
+    font-weight: 300;
+    @include max-768 {
+      font-size: 16px;
+    }
+  }
+  .table td:first-of-type {
+    font-weight: 700;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-bg-type: #edf3f8;
+  }
+}
+
+// General Table
 
 .titles-wrapper {
   display: flex;
@@ -252,7 +313,7 @@ ol.breadcrumb li {
 
 // Lazy load
 
-.lazy-img{
+.lazy-img {
   transition: all linear 0.2s;
 }
 .loading-img {
