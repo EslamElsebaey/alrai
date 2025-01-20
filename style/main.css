@@ -79,7 +79,7 @@ body.overflowHidden {
 }
 @media only screen and (max-width: 767px) {
   body {
-    padding-top: 74.5px;
+    padding-top: 72.5px;
   }
 }
 
@@ -244,7 +244,7 @@ ol.breadcrumb li {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 15;
+  z-index: 8;
   gap: 10px;
 }
 @media only screen and (max-width: 767px) {
@@ -369,6 +369,9 @@ ol.breadcrumb li {
   opacity: 1;
 }
 
+.general-table {
+  width: 100%;
+}
 .general-table .table {
   --bs-table-striped-bg: #edf3f8;
   margin-bottom: 0;
@@ -557,7 +560,7 @@ ol.breadcrumb li {
 }
 @media only screen and (max-width: 767px) {
   .header {
-    padding: 12px 0 10px 0;
+    padding: 10px 0;
   }
 }
 .header::after {
@@ -587,17 +590,14 @@ ol.breadcrumb li {
   height: 9px;
   bottom: -9.5px;
 }
-.fixed-header .logo::after {
-  width: 40px;
-  height: 20px;
-  bottom: -20px;
-}
-.fixed-header .logo img {
-  width: 140px;
-}
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) {
+  .fixed-header .logo::after {
+    width: 40px;
+    height: 20px;
+    bottom: -20px;
+  }
   .fixed-header .logo img {
-    width: 120px;
+    width: 130px;
   }
 }
 
@@ -651,7 +651,7 @@ ol.breadcrumb li {
   .logo::after {
     width: 40px;
     height: 20px;
-    bottom: -22px;
+    bottom: -20px;
   }
 }
 .logo::before {
@@ -1122,7 +1122,7 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
     width: 120px;
   }
   .search .close-searh-btn {
-    top: 35px;
+    top: 40px;
     inset-inline-start: 20px;
   }
   .general-details {
@@ -1734,6 +1734,11 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
   text-align: start;
   max-width: 100%;
 }
+@media only screen and (max-width: 767px) {
+  .branches-details .titles-wrapper {
+    margin-bottom: 25px;
+  }
+}
 .branches-details .branches-content {
   display: flex;
   align-items: center;
@@ -1743,6 +1748,11 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
 @media only screen and (max-width: 1199px) {
   .branches-details .branches-content {
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .branches-details .branches-content {
+    gap: 50px;
   }
 }
 
@@ -2647,7 +2657,7 @@ html[dir=ltr] .year-item {
     line-height: 1.6;
   }
 }
-html[dir=ltr] .distributors-table .table td:last-of-type {
+html[dir=ltr] .distributors-table .table td:last-of-type, html[dir=ltr] .branches-table .table td:last-of-type {
   text-align: start;
 }
 @media only screen and (max-width: 767px) {

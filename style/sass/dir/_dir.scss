@@ -25,8 +25,10 @@ html[dir="ltr"] {
       line-height: 1.6;
     }
   }
-  .distributors-table .table td:last-of-type {
-    text-align: start;
+  .distributors-table , .branches-table {
+    .table td:last-of-type {
+      text-align: start;
+    }
   }
   .product-wrapper .description-wrapper .desc-group .desc {
     @include max-768 {

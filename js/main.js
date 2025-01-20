@@ -37,12 +37,11 @@ $(document).ready(function () {
 
   // ***********************************************************************************************
 
-  // Fire Select2
+  //  Select2
 
   if ($(".myselect").length > 0) {
-    // fire select2
+    console.log(1);
     $(".myselect").select2();
-
     $(".form select").select2({
       minimumResultsForSearch: -1,
     });
@@ -344,7 +343,7 @@ $(document).ready(function () {
   //  Footer Dropdown Menu
 
   if ($(window).width() < 768) {
-    $(".footer-title").click(function () {
+    $(".footer-title").on("click" , function () {
       $(this).next(".collapsible").slideToggle(300);
       $(this).toggleClass("arrow-rotate");
       $(".footer-title").not($(this)).next(".collapsible").slideUp(300);
