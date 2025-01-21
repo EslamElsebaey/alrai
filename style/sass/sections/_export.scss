@@ -1,4 +1,5 @@
-.export-form {
+.export-form-sec,
+.joinUs-form-sec {
   padding-top: 40px;
   padding-bottom: 100px;
   @include max-768 {
@@ -18,4 +19,3 @@
     max-width: 100%;
   }
 }
-

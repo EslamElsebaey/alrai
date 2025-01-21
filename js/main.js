@@ -343,12 +343,67 @@ $(document).ready(function () {
   //  Footer Dropdown Menu
 
   if ($(window).width() < 768) {
-    $(".footer-title").on("click" , function () {
+    $(".footer-title").on("click", function () {
       $(this).next(".collapsible").slideToggle(300);
       $(this).toggleClass("arrow-rotate");
       $(".footer-title").not($(this)).next(".collapsible").slideUp(300);
       $(".footer-title").not($(this)).removeClass("arrow-rotate");
     });
   }
+  // ***********************************************************************************************
+
+  const uploadBtn = document.querySelector(".addFile-btn");
+  const inputFile = document.querySelector(".inputFile");
+  const dropArea = document.querySelector(".dropArea");
+  // const fileName = document.querySelector(".fileName");
+  const filesWrapper = document.querySelector(".filesWrapper");
+
+  // function to trigger input when click button
+  uploadBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    inputFile.click();
+  });
+
+  inputFile.addEventListener("change", uploadFile);
+  function uploadFile() {
+    const files = inputFile.files;
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const fileName = document.createElement("p");
+      fileName.classList.add("file-name");
+      fileName.textContent = file.name;
+      filesWrapper.appendChild(fileName);
+    }
+  }
+
+  // function to trigger input when drop file
+
+  dropArea.addEventListener("dragover", function (e) {
+    e.preventDefault();
+    console.log(1000);
+    dropArea.classList.add("active");
+  });
+
+  dropArea.addEventListener("dragleave", function (e) {
+    e.preventDefault();
+    dropArea.classList.remove("active");
+  });
+
+  dropArea.addEventListener("drop", function (e) {
+    e.preventDefault();
+    inputFile.files = e.dataTransfer.files;
+    uploadFile();
+    dropArea.classList.remove("active");
+  });
+
+  // ***********************************************************************************************
+
+   $(".addMore-btn").on("click", function (e) {
+    e.preventDefault()
+     const originalElement = $(".custom-input-wrapper").first();
+     const clonedElement = originalElement.clone();
+     clonedElement.find("input").val("");
+     originalElement.after(clonedElement);
+   });
   // ***********************************************************************************************
 }); // End Document Ready

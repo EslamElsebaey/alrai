@@ -103,10 +103,10 @@ html[dir="rtl"] {
 
 // Select2
 
-
-.select2-hidden-accessible , select{
-    width: 100% !important;
-    height: 50px !important;
+.select2-hidden-accessible,
+select {
+  width: 100% !important;
+  height: 50px !important;
 }
 
 .select2-container--default
@@ -171,3 +171,4 @@ html[dir="ltr"] {
   align-items: center;
   font-size: 14px;
 }
+
