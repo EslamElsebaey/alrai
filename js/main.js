@@ -39,8 +39,7 @@ $(document).ready(function () {
 
   //  Select2
 
-  if ($(".myselect").length > 0) {
-    console.log(1);
+  if ($(".myselect").length) {
     $(".myselect").select2();
     $(".form select").select2({
       minimumResultsForSearch: -1,
@@ -352,58 +351,66 @@ $(document).ready(function () {
   }
   // ***********************************************************************************************
 
-  const uploadBtn = document.querySelector(".addFile-btn");
-  const inputFile = document.querySelector(".inputFile");
-  const dropArea = document.querySelector(".dropArea");
-  // const fileName = document.querySelector(".fileName");
-  const filesWrapper = document.querySelector(".filesWrapper");
 
-  // function to trigger input when click button
-  uploadBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    inputFile.click();
-  });
 
-  inputFile.addEventListener("change", uploadFile);
-  function uploadFile() {
-    const files = inputFile.files;
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
-      const fileName = document.createElement("p");
-      fileName.classList.add("file-name");
-      fileName.textContent = file.name;
-      filesWrapper.appendChild(fileName);
+    const uploadBtn = $(".addFile-btn");
+    const inputFile = $(".inputFile");
+    const dropArea = $(".dropArea");
+    const filesWrapper = $(".filesWrapper");
+   
+    if (uploadBtn.length && inputFile.length && filesWrapper.length) {
+      // Function to trigger input when clicking the button
+      uploadBtn.on("click", function (e) {
+        e.preventDefault();
+        inputFile.click();
+      });
+
+      // Handle file input change
+      inputFile.on("change", function () {
+        uploadFile();
+      });
+
+      function uploadFile() {
+        const files = inputFile[0].files;
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const fileName = $("<p>").addClass("file-name").text(file.name);
+          filesWrapper.append(fileName);
+        }
+      }
     }
-  }
 
-  // function to trigger input when drop file
+    // Drag and drop functionality
+    if (dropArea.length) {
+      dropArea.on("dragover", function (e) {
+        e.preventDefault();
+        dropArea.addClass("active");
+      });
 
-  dropArea.addEventListener("dragover", function (e) {
-    e.preventDefault();
-    console.log(1000);
-    dropArea.classList.add("active");
-  });
+      dropArea.on("dragleave", function (e) {
+        e.preventDefault();
+        dropArea.removeClass("active");
+      });
 
-  dropArea.addEventListener("dragleave", function (e) {
-    e.preventDefault();
-    dropArea.classList.remove("active");
-  });
+      dropArea.on("drop", function (e) {
+        e.preventDefault();
+        const files = e.originalEvent.dataTransfer.files;
+        inputFile[0].files = files;
+        uploadFile();
+        dropArea.removeClass("active");
+      });
+    }
+ 
 
-  dropArea.addEventListener("drop", function (e) {
-    e.preventDefault();
-    inputFile.files = e.dataTransfer.files;
-    uploadFile();
-    dropArea.classList.remove("active");
-  });
 
   // ***********************************************************************************************
 
-   $(".addMore-btn").on("click", function (e) {
-    e.preventDefault()
-     const originalElement = $(".custom-input-wrapper").first();
-     const clonedElement = originalElement.clone();
-     clonedElement.find("input").val("");
-     originalElement.after(clonedElement);
-   });
+  $(".addMore-btn").on("click", function (e) {
+    e.preventDefault();
+    const originalElement = $(".custom-input-wrapper").first();
+    const clonedElement = originalElement.clone();
+    clonedElement.find("input").val("");
+    originalElement.after(clonedElement);
+  });
   // ***********************************************************************************************
 }); // End Document Ready
