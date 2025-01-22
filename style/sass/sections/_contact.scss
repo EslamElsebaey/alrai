@@ -1,0 +1,142 @@
+.contact {
+  .contact-info {
+    // height: 368px;
+    padding-top: 35px;
+    padding-bottom: 60px;
+    padding-inline: 30px;
+    background-color: $main-color;
+    .main-title {
+      color: #fff;
+    }
+  }
+  .input-holder{
+    margin-bottom: 25px;
+  }
+  .submitBtn{
+    min-width: 180px;
+    // font-size: 20px;
+  }
+
+  .contact-methods {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      line-height: 26px;
+      a {
+        transition: color linear 0.2s;
+        font-size: 18px;
+        color: #ffffff;
+        &:hover {
+          color: $second-color;
+        }
+        @include max-768 {
+          font-size: 16px;
+        }
+      }
+    }
+    .icon {
+      font-size: 22px;
+      color: $second-color;
+      @include max-768 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.map-contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 458px;
+  gap: 30px;
+  .map {
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  a {
+    display: flex;
+    &:hover {
+      .icon {
+        color: $second-color;
+      }
+    }
+  }
+  .icon {
+    transition: color linear 0.2s;
+    font-size: 22px;
+    color: #ffffff;
+  }
+}
+
+.contact-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include max-1200 {
+    column-gap: 30px;
+  }
+  @include max-992 {
+    flex-direction: column;
+    row-gap: 35px;
+    align-items: center;
+  }
+}
+
+.contact-form-wrapper {
+  width: 555px;
+  .main-title{
+    line-height: 1.5;
+  }
+  @include max-1200 {
+    width: 480px;
+  }
+  @include max-768 {
+    width: 100%;
+  }
+}
+
+.map-contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 458px;
+  gap: 30px;
+  .map {
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+.contact-info {
+  // height: 368px;
+  padding-top: 35px;
+  padding-bottom: 60px;
+  padding-inline: 30px;
+  background-color: #221355;
+  .general-title {
+    margin-bottom: 45px;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: normal;
+    text-align: start;
+    &::after {
+      inset-inline-start: 0;
+      transform: unset;
+      bottom: -15px;
+    }
+  }
+}

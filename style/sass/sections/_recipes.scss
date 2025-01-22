@@ -39,7 +39,6 @@
   .recipe-title {
     color: #fff;
     margin-bottom: 10px;
- 
   }
   .recipe-desc {
     max-width: 313px;
@@ -66,6 +65,42 @@
     color: #9bc5eb;
     text-align: center;
     transition: all linear 0.2s;
+    &:hover {
+      color: $second-color;
+    }
+  }
+}
+
+.recipes-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 40px;
+  @include max-768 {
+    column-gap: 15px;
+  }
+  .recipe-item {
+    width: calc((100% / 3) - 20px);
+    @include max-992 {
+      width: calc((100% / 2) - 15px);
+    }
+    @include max-768 {
+      width: calc((100% / 2) - 7.5px);
+    }
+  }
+  .recipe-item .recipe-title,
+  .recipe-item .recipe-desc {
+    color: #333;
+  }
+  .recipe-item .recipe-title {
+    &:hover {
+      color: $second-color;
+    }
+  }
+  .recipe-item .recipe-link {
+    color: $main-color;
     &:hover {
       color: $second-color;
     }

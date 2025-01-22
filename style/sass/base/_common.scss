@@ -81,6 +81,7 @@ ol.breadcrumb li {
 
 // End Breadcrumb
 
+
 .whatsapp-wrapper {
   display: flex;
   flex-direction: column;
@@ -215,9 +216,7 @@ ol.breadcrumb li {
 
 // End Swiper
 
-
 // General Table
-
 
 .general-table {
   width: 100%;
@@ -311,6 +310,21 @@ ol.breadcrumb li {
     margin-bottom: 15px;
   }
 }
+
+
+
+.pages-titles-wrapper {
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  .main-title {
+    text-align: start;
+    max-width: 100%;
+  }
+  @include max-768 {
+    margin-bottom: 25px;
+  }
+}
+
 
 // Lazy load
 

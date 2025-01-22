@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   //  Select2
 
-  if ($(".myselect").length) {
+  if ($(".myselect").length > 0) {
     $(".myselect").select2();
     $(".form select").select2({
       minimumResultsForSearch: -1,
@@ -351,57 +351,53 @@ $(document).ready(function () {
   }
   // ***********************************************************************************************
 
+  const uploadBtn = $(".addFile-btn");
+  const inputFile = $(".inputFile");
+  const dropArea = $(".dropArea");
+  const filesWrapper = $(".filesWrapper");
 
+  if (uploadBtn.length && inputFile.length && filesWrapper.length) {
+    // Function to trigger input when clicking the button
+    uploadBtn.on("click", function (e) {
+      e.preventDefault();
+      inputFile.click();
+    });
 
-    const uploadBtn = $(".addFile-btn");
-    const inputFile = $(".inputFile");
-    const dropArea = $(".dropArea");
-    const filesWrapper = $(".filesWrapper");
-   
-    if (uploadBtn.length && inputFile.length && filesWrapper.length) {
-      // Function to trigger input when clicking the button
-      uploadBtn.on("click", function (e) {
-        e.preventDefault();
-        inputFile.click();
-      });
+    // Handle file input change
+    inputFile.on("change", function () {
+      uploadFile();
+    });
 
-      // Handle file input change
-      inputFile.on("change", function () {
-        uploadFile();
-      });
-
-      function uploadFile() {
-        const files = inputFile[0].files;
-        for (let i = 0; i < files.length; i++) {
-          const file = files[i];
-          const fileName = $("<p>").addClass("file-name").text(file.name);
-          filesWrapper.append(fileName);
-        }
+    function uploadFile() {
+      const files = inputFile[0].files;
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const fileName = $("<p>").addClass("file-name").text(file.name);
+        filesWrapper.append(fileName);
       }
     }
+  }
 
-    // Drag and drop functionality
-    if (dropArea.length) {
-      dropArea.on("dragover", function (e) {
-        e.preventDefault();
-        dropArea.addClass("active");
-      });
+  // Drag and drop functionality
+  if (dropArea.length) {
+    dropArea.on("dragover", function (e) {
+      e.preventDefault();
+      dropArea.addClass("active");
+    });
 
-      dropArea.on("dragleave", function (e) {
-        e.preventDefault();
-        dropArea.removeClass("active");
-      });
+    dropArea.on("dragleave", function (e) {
+      e.preventDefault();
+      dropArea.removeClass("active");
+    });
 
-      dropArea.on("drop", function (e) {
-        e.preventDefault();
-        const files = e.originalEvent.dataTransfer.files;
-        inputFile[0].files = files;
-        uploadFile();
-        dropArea.removeClass("active");
-      });
-    }
- 
-
+    dropArea.on("drop", function (e) {
+      e.preventDefault();
+      const files = e.originalEvent.dataTransfer.files;
+      inputFile[0].files = files;
+      uploadFile();
+      dropArea.removeClass("active");
+    });
+  }
 
   // ***********************************************************************************************
 

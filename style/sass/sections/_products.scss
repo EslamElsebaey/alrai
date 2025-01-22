@@ -7,7 +7,6 @@
   }
 }
 
-
 .product-item {
   display: flex;
   flex-direction: column;
@@ -70,110 +69,27 @@
   }
 }
 
-// .second-border-div {
-//   overflow: hidden;
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   padding: 40px;
-//   justify-content: center;
-// }
-
-// .main-border-div {
-//   position: relative;
-// }
-
-// .second-border-div::before,
-// .second-border-div::after  , .main-border-div::before,
-// .main-border-div::after{
-//   content: "";
-//   width: 100%;
-//   height: 60px;
-//   position: absolute;
-//   transition: all 0.2s linear;
-//   background: transparent;
-//   border: 2px solid $second-color;
-//   z-index: 0;
-//   border-radius: 25px;
-// }
-
-// .main-border-div::before,
-// .main-border-div::after {
-//   width: 0;
-// }
-// .second-border-div::before,
-// .second-border-div::after {
-//   height: 0;
-// }
-
-// .second-border-div::before {
-//   border-bottom: transparent;
-// }
-
-// .second-border-div::after {
-//   border-top: transparent;
-// }
-
-// .main-border-div:hover::before,
-// .main-border-div:hover::after {
-//   width: 100%;
-// }
-
-// .main-border-div:hover .second-border-div::before,
-// .main-border-div:hover .second-border-div::after {
-//   height: 100%;
-// }
-
-// .main-border-div::before,
-// .main-border-div::after {
-//   transition-delay: 0.2s;
-// }
-
-// .main-border-div .second-border-div::before,
-// .main-border-div .second-border-div::after {
-//   transition-delay: 0s;
-// }
-
-// .main-border-div::before {
-//   right: 0;
-//   top: 0px;
-//   border-bottom: transparent;
-//   border-right: transparent;
-//   border-left: transparent;
-//   // border-radius: 25px;
-// }
-
-// .main-border-div::after {
-//   left: 0;
-//   bottom: 0px;
-//   border-top: transparent;
-//   border-right: transparent;
-//   border-left: transparent;
-//   // border-radius: 25px;
-// }
-
-// .second-border-div::before {
-//   left: 0px;
-//   top: 0;
-//   border-right: transparent;
-//   border-top: transparent;
-//   border-bottom: transparent;
-// }
-
-// .second-border-div::after {
-//   right: 0px;
-//   bottom: 0;
-//   border-left: transparent;
-//   border-bottom: transparent;
-// }
-
-// .main-border-div:hover::before,
-// .main-border-div:hover::after {
-//   transition-delay: 0s;
-// }
-
-// .main-border-div:hover .second-border-div::before,
-// .main-border-div:hover .second-border-div::after {
-//   transition-delay: 0.2s;
-// }
+.general-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  @include max-1200 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include max-992 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+   @include max-768 {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    row-gap: 30px;
+  }
+}
+.general-page-sec {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  @include max-768 {
+    padding-bottom: 60px;
+    padding-top: 25px;
+  }
+}
