@@ -36,7 +36,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 50px;
+  @include max-768 {
+    margin-top: 30px;
+  }
   .brand-item {
     max-width: 160px;
   }

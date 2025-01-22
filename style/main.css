@@ -1734,7 +1734,12 @@ html[dir=ltr] .submenu-dropdown-li > .sub-arrow-rotate::after {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .brands-wrapper {
+    margin-top: 30px;
+  }
 }
 .brands-wrapper .brand-item {
   max-width: 160px;
