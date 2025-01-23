@@ -312,16 +312,11 @@ $(document).ready(function () {
   // Mobile Dropdown Menu
 
   if ($(window).width() < 992) {
-    $(".dropdown-li > a").removeAttr("href");
-    $(".submenu-dropdown-li > a").removeAttr("href");
-    $(".dropdown-li > a").on("click", function () {
-      $(this).siblings(".slider-div").slideToggle(300);
-      $(this).toggleClass("arrow-rotate");
-    });
-    $(".submenu-dropdown-li > a").on("click", function (e) {
-      e.stopPropagation();
-      $(this).siblings(".slider-div").slideToggle(300);
-      $(this).toggleClass("sub-arrow-rotate");
+    $(".menu-item-has-children > a").removeAttr("href");
+    $(".menu-item-has-children > a").on("click", function (e) {
+       e.stopPropagation();
+      $(this).siblings(".sub-menu").slideToggle(300);
+      $(this).toggleClass("mobile-arrow-rotate");
     });
   }
 
