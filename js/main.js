@@ -52,7 +52,7 @@ $(document).ready(function () {
   // Main Swiper
   const mainSwiper = new Swiper(".mainBanner .swiper", {
     loop: true,
-    // autoplay: true,
+     autoplay: true,
     draggable: true,
     speed: 800,
     pagination: {
@@ -75,7 +75,7 @@ $(document).ready(function () {
   const productSwiper = new Swiper(".products .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+     autoplay: true,
     speed: 800,
     pagination: {
       el: ".products .swiper-pagination",
@@ -114,7 +114,7 @@ $(document).ready(function () {
   const recipeSwiper = new Swiper(".recipes .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+     autoplay: true,
     speed: 800,
     // navigation: {
     //   nextEl: " .recipes .swiper-button-next",
@@ -152,7 +152,7 @@ $(document).ready(function () {
   const brandSwiper = new Swiper(".brands .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+     autoplay: true,
     speed: 800,
     pagination: {
       el: ".brands .swiper-pagination",
@@ -186,7 +186,7 @@ $(document).ready(function () {
   const expYearsSwiper = new Swiper(".exp-years .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+     autoplay: true,
     speed: 800,
     pagination: {
       el: ".exp-years .swiper-pagination",
