@@ -114,7 +114,7 @@ select {
   background-color: $main-color;
 }
 
-.select2-container {
+.form .select2-container {
   width: 100% !important;
   &::after {
     content: "\f078";
@@ -130,7 +130,7 @@ select {
   }
 }
 
-.select2-container--open {
+.form .select2-container--open {
   .select2-selection--single {
     border-color: $main-color !important;
   }
@@ -171,4 +171,3 @@ html[dir="ltr"] {
   align-items: center;
   font-size: 14px;
 }
-

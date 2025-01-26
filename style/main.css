@@ -1992,10 +1992,10 @@ select {
   background-color: #00529b;
 }
 
-.select2-container {
+.form .select2-container {
   width: 100% !important;
 }
-.select2-container::after {
+.form .select2-container::after {
   content: "\f078";
   font-family: "Font Awesome 6 Pro";
   position: absolute;
@@ -2008,10 +2008,10 @@ select {
   z-index: 1;
 }
 
-.select2-container--open .select2-selection--single {
+.form .select2-container--open .select2-selection--single {
   border-color: #00529b !important;
 }
-.select2-container--open::after {
+.form .select2-container--open::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
